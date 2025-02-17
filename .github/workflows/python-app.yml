@@ -31,11 +31,11 @@ jobs:
         if: always()  # s'exécute même si les tests échouent
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.example.com
-          server_port: 587
+          server_address: smtp.gmail.com
+          server_port: 465
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "GitHub Actions - Résultat des tests"
           body: "Les tests du dépôt ont été exécutés. Statut du job : ${{ job.status }}."
           to: cedric.surquin@gmail.com
-          from: your-email@example.com
+          from: ${{ secrets.EMAIL_ADDRESS }}
