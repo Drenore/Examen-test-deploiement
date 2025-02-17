@@ -38,4 +38,4 @@ jobs:
           subject: "GitHub Actions - Résultat des tests"
           body: "Les tests du dépôt ont été exécutés. Statut du job : ${{ job.status }}."
           to: cedric.surquin@gmail.com
-          from: ${{ secrets.EMAIL_ADDRESS }}
+          from: benjamin.cristinelli1@gmail.com
